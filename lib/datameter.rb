@@ -1,5 +1,5 @@
-require_relative "./datameter/spectranet_user"
 require "datameter/version"
+require "datameter/spectranet_user"
 
 module Datameter
   def self.get_data_balance(provider, username, pwd)
