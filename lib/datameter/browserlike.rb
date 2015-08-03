@@ -21,10 +21,11 @@ module BrowserLike
 			    field.value = value
 			end
 	  	end.click_button
+
+	  	page = form
 	  	
-	  	puts '*******************************************************************************'
 	  	page.search(path).each do |node|
-	  		puts node.text.strip
+	  		return node.text.strip
 	  	end
 	end
 end

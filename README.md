@@ -1,6 +1,10 @@
 # Datameter
 
-TODO: Write a gem description
+This is a simple ruby library for getting your internet data balance. 
+
+It works by programmatically visting your ISP's web portal, filling the login form and scraping the data balance off the page.
+
+It currently works for just Spectranet, but the plan is to include other ISP's.
 
 ## Installation
 
@@ -20,7 +24,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+.. code-block:: ruby
+
+    require 'datameter'
+	data_balance = Datameter.get_data_balance('spectranet', 'userid', 'password')
+
 
 ## Contributing
 
