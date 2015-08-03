@@ -14,29 +14,17 @@ module BrowserLike
 		@page = browser.get link
 	end
 
-
-	def submit_form form_id, form_params
+	def find_in_page form_id, form_params, path
 		form = page.form_with(:id => form_id) do |f|
-			# form_params.each do |key, value|
-			# 	f.field_with(:name => key).value(value)
-			# end
-			x = f.field_with(:name => 'signInForm.username')
-			x.value = '19841012'
-			y = f.field_with(:name => 'signInForm.password')
-			y.value = 'chlorMEL1$'
+			form_params.each do |key, value|
+			    field = f.field_with(:name => key)
+			    field.value = value
+			end
 	  	end.click_button
-
-	  	page = form
+	  	
 	  	puts '*******************************************************************************'
-	  	page.search(%q{//table[@class='dataTable']/tr[1]/td[2]/label}).each do |node|
+	  	page.search(path).each do |node|
 	  		puts node.text.strip
 	  	end
-
-	end
-
-	def find_in_page path
-		page.search path do |node|
-			node.text.strip
-		end
 	end
 end
