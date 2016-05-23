@@ -24,10 +24,12 @@ Or install it yourself as:
 
 ## Usage
 
-.. code-block:: ruby
 
     require 'datameter'
-	data_balance = Datameter.get_data_balance('spectranet', 'userid', 'password')
+	balance = Datameter.get_data_balance('ISP', 'userid', 'password')
+	puts balance
+	>>> 7:336:750(GB:MB:KB)
+Valid values for ISP - "spectranet"
 
 
 ## Contributing
