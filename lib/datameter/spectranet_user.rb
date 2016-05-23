@@ -14,7 +14,8 @@ class SpectranetUser
 
 	def get_data_balance
 		visit_link URL
-		find_in_page FORM_ID, {'signInForm.username' => username, 'signInForm.password' => password}, DATA_BALANCE_XPATH
+		balance = find_in_page FORM_ID, {'signInForm.username' => username, 'signInForm.password' => password}, DATA_BALANCE_XPATH
+		if balance != 0 then return balance else return nil end
 	end
 
 end
