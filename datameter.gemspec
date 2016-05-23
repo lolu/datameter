@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Datameter::VERSION
   spec.authors       = ["Lolu Bodunwa"]
   spec.email         = ["btemilolu@gmail.com"]
-  spec.summary       = %q{Get your Internet Data Balance programmatically.}
-  spec.description   = %q{Get your Internet Data Balance programmatically.}
-  spec.homepage      = ""
+  spec.summary       = %q{ISP Data Balance.}
+  spec.description   = %q{Get your ISP Internet Data Balance programmatically.}
+  spec.homepage      = "http://lolubodunwa.me"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
